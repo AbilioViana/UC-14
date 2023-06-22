@@ -23,7 +23,7 @@ namespace Chapter.WebApi.Contexts
             if (!optionsBuilder.IsConfigured)
             {
                 // Essa string de conexão foi depende da SUA máquina.
-                optionsBuilder.UseSqlServer("Data Source = DESKTOP-CS5L0LS; initial catalog = Chapter; Integrated Security = true");
+                optionsBuilder.UseSqlServer("DESKTOP-CS5L0LS\\SQLEXPRESS; initial catalog = Chapter; Integrated Security = true");
                 // Exemplo 1 de string de conexão:
                 // User ID=sa;Password=admin;Server=localhost;Database=Chapter;-
                 // + Trusted_Connection=False;
@@ -32,6 +32,7 @@ namespace Chapter.WebApi.Contexts
             }
         }
         public DbSet<Livro> Livros { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
     }
 }
